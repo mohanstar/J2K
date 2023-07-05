@@ -38,7 +38,7 @@ pipeline {
       steps {
         script {
           docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
-          dockerImage.pull()
+          dockerImage.pull() }
           sh "kubectl apply -f ./deployment.yaml -n qp"
           sh "kubectl apply -f ./service.yaml -n qp"
         }
