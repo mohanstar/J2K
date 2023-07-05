@@ -5,12 +5,6 @@ pipeline {
         registryCredential = 'DockerHubCreds' 
   }
 
-  agent {
-    node {
-        label 'j2k-worker-node'
-    }
-  }
-
   stages {
 
     stage('Checkout Source') {
