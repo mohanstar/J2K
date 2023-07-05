@@ -44,8 +44,6 @@ stage('Kubernetes Authentication') {
   }
 }
 
-
-
     stage('Deploying React.js container to Kubernetes') {
       steps {
         script {
