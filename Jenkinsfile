@@ -1,5 +1,5 @@
 pipeline {
-
+agnet any
   environment {
         registry = "mohankt/j2k:1.0.0"
         registryCredential = 'DockerHubCreds' 
