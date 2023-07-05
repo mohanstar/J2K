@@ -38,6 +38,7 @@ pipeline {
 stage('Kubernetes Authentication') {
   steps {
     withCredentials([usernamePassword(credentialsId: 'k8s-k', usernameVariable: 'KUBE_USER', passwordVariable: 'KUBE_TOKEN')]) {
+sh 'echo ${KUBE_USER}'
       sh 'kubectl config set-credentials jenkins --token=${KUBE_TOKEN}'
       sh 'kubectl config set-context jenkins-context --cluster=kubernetes-admin@kubernetes --user=jenkins --namespace=default'
       sh 'kubectl config use-context jenkins-context'
