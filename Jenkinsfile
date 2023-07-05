@@ -40,8 +40,9 @@ pipeline {
           docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
           //docker pull mohankt/j2k:1.0.0
           }
-          sh "kubectl apply -f deployment.yaml"
-          sh "kubectl apply -f service.yaml"
+               sh "kubectl get nodes"
+         // sh "kubectl apply -f deployment.yaml"
+          // sh "kubectl apply -f service.yaml"
         }
       }
     }
