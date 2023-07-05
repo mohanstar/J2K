@@ -7,11 +7,12 @@ pipeline {
 
   stages {
 
-    stage('Checkout Source') {
+   /* stage('Checkout Source') {
       steps {
         git branch: 'main', url: 'https://github.com/mohanstar/J2K.git'
       }
     }
+    
 
   /*  stage('Build image') {
       steps{
