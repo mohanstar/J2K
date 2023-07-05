@@ -13,7 +13,7 @@ pipeline {
       }
     }
 
-    stage('Build image') {
+  /*  stage('Build image') {
       steps{
         script {
           dockerImage = docker.build registry
@@ -32,7 +32,7 @@ pipeline {
           }
         }
       }
-    }
+    } */
 
     stage('Deploying React.js container to Kubernetes') {
       steps {
