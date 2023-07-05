@@ -7,7 +7,7 @@ pipeline {
 
   agent {
     node {
-        label 'j2k-worker-node-dev-j2k'
+        label 'j2k-worker-node'
     }
   }
 
