@@ -11,7 +11,7 @@ COPY . $REACTJS_HOME
 # install dependencies
 RUN npm install -g serve
 
-RUN npm install
+RUN npm install joi
 RUN npm run build
 
 EXPOSE 3000
